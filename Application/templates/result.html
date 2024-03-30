@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/common.css">
+    <link rel="stylesheet" href="../static/css/upload.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="wrapper">
+            <h1>Plant Leaf Diseases Recognition</h1>
+        </div>
+    </div>
+
+<div class="prod_detail wrapper">
+    <div class="content">
+        <div class="normal">
+            <div class="result_pic collapse">
+                <img class="active" src="{{ picture_src }}">
+            </div>
+        </div>
+
+        <div class="result">
+            <h2>Plant: {{ result[0] }}</h2>
+            {% if result[1] == 'healthy' %}
+                <h2 style="color: green">Result: Healthy</h2>
+            {% else %}
+                <h2 style="color: red">Result: {{ result[1] }}</h2>
+            {% endif %}
+        </div>
+
+        <div class="opt">
+            <a href="/">Back</a>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+
+</div>
+
+</body>
+
+</html>

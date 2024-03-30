@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/common.css">
+    <link rel="stylesheet" href="../static/css/upload.css">
+</head>
+
+<body>
+<div class="header">
+    <div class="wrapper">
+        <h1>Plant Leaf Diseases Recognition</h1>
+    </div>
+</div>
+
+<div class="prod_detail wrapper">
+    <div class="content">
+        <form action="/recognize" method="post" enctype="multipart/form-data">
+            <div class="title">
+                <h2>Please Upload the Image</h2>
+            </div>
+            <div class="normal">
+                <div class="pic">
+                    <input type="file" name="picture" class="input_pic" accept="image/*" title="Please upload an image.">
+                    <img src="../static/images/blank.png">
+                    <p><span>+ </span>Upload the Image Here</p>
+                </div>
+            </div>
+            {% if noFile %}
+            <div class="result">
+                <h2 style="color: red; font-size: 16px;">No image uploaded! Please upload an image before starting.</h2>
+            </div>
+            {% endif %}
+            <div class="opt">
+                <button>Start to Recognize</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="footer">
+
+</div>
+
+<script>
+    const input_pic = document.querySelector('.input_pic');
+    const img = document.querySelector('.pic img');
+    const text = document.querySelector('.pic p');
+    if (img.getAttribute("src") !== '') {
+        img.style.display = "block"
+    } else if (img.getAttribute("src") === '') {
+        text.style.display = "block";
+    }
+
+    input_pic.addEventListener('change', function () {
+        let file = this.files[0];
+        if (file.type.indexOf("image") == 0) {
+            let reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = function (e) {
+                let newUrl = this.result;
+                img.src = newUrl;
+            }
+            img.style.display = "block";
+            text.style.display = "none";
+        }
+    })
+
+    const input = document.querySelectorAll('input');
+    for (let i = 0; i < input.length; i++) {
+        if (input[i].value !== '') {
+            input[i].style.border = 'none'
+            input[i].style.boxShadow = 'none'
+        }
+        input[i].addEventListener('blur', function () {
+            if (input[i].value === '') {
+                input[i].style.border = '1px solid rgb(23, 149, 19)';
+                input[i].style.borderRadius = '2px';
+            } else {
+                input[i].style.border = 'none';
+                input[i].style.boxShadow = 'none'
+            }
+        })
+        input[i].addEventListener('focus', function () {
+            input[i].style.border = '1px solid rgb(23, 149, 19)';
+            input[i].style.borderRadius = '2px';
+            input[i].style.outline = 'none'
+        })
+    }
+
+
+</script>
+
+</body>
+
+</html>

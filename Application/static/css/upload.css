@@ -1,0 +1,200 @@
+.prod_detail {
+    padding-bottom: 40px;
+    padding-left: 300px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: 1px solid rgb(23, 149, 19);
+    background-color: #fff;
+}
+
+.prod_detail .head a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 20px 50px;
+    text-decoration: none;
+    font-size: 19px;
+    color: #000;
+    border: 1px solid rgb(23, 149, 19);
+}
+
+.prod_detail .content .normal {
+    margin-top: 20px;
+}
+
+.prod_detail .content .pic {
+    position: relative;
+    margin-left: 84px;
+    width: 350px;
+    height: 350px;
+    /*border: 1px solid rgb(23, 149, 19);*/
+}
+
+.prod_detail .content .pic p {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+}
+
+.prod_detail .content .pic input {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    opacity: 0;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.prod_detail .content .pic img {
+    display: none;
+    width: 350px;
+    height: 350px;
+}
+
+.prod_detail .content .attribute {
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 19px;
+}
+
+.prod_detail .content .attribute div {
+    margin-bottom: 20px;
+}
+
+.prod_detail .content .attribute h3 {
+    font-weight: normal;
+    font-size: 19px;
+}
+
+.prod_detail .content .attribute span {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+}
+
+.prod_detail .attribute .price i{
+    color: red;
+}
+
+.prod_detail .content .attribute input[type='text'] {
+    padding-left: 10px;
+    font-size: 19px;
+    width: 250px;
+    border: 1px solid rgb(23, 149, 19);
+    border-radius: 2px;
+    outline: none;
+}
+
+.prod_detail .content .attribute textarea {
+    margin-top: 10px;
+    padding: 8px 10px;
+    width: 560px;
+    height: 100px;
+    resize: none;
+    outline: none;
+    border: 1px solid rgb(23, 149, 19);
+    border-radius: 2px;
+    font-size: 16px;
+}
+
+.prod_detail .content .attribute h2 {
+    position: relative;
+    margin-left: 160px;
+}
+
+.prod_detail .content .result h2 {
+    text-align: center;
+    position: relative;
+    margin-right: 320px;
+    margin-top: 15px;
+}
+
+.prod_detail .content .title h2 {
+    position: relative;
+    margin-left: 110px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.prod_detail div a{
+    display: inline-block;
+    margin-top: 25px;
+    margin-left: 200px;
+    padding: 0 16px;
+    text-align: center;
+    height: 50px;
+    width: 120px;
+    line-height: 50px;
+    border: 0;
+    cursor: pointer;
+    background-color: rgb(23, 149, 19);
+    color: white;
+    font-size: 20px;
+}
+
+.prod_detail div button{
+    display: inline-block;
+    margin-top: 25px;
+    margin-left: 89px;
+    padding: 0 16px;
+    text-align: center;
+    height: 50px;
+    width: 340px;
+    line-height: 50px;
+    border: 0;
+    cursor: pointer;
+    background-color: rgb(23, 149, 19);
+    color: white;
+    font-size: 20px;
+}
+
+.prod_detail .content .attribute .pay_price {
+    color: red;
+}
+
+.prod_detail .content .attribute .pay_price span {
+    font-size: 19px;
+}
+
+.prod_detail .content .attribute .pay_choose ul{
+    margin-left: 140px;
+}
+
+.prod_detail .content .attribute .pay_choose li{
+    float: left;
+    margin-left: 10px;
+    padding: 3px 10px;
+    border: 1px solid black;
+    box-shadow: 1px 2px;
+    cursor: pointer;
+    background-color: rgba(218, 218, 218, 0.5);
+}
+
+.prod_detail .content .attribute .pay_choose .active{
+    background-color: rgb(23, 149, 19);
+    color: #fff;
+    box-shadow: 1px 2px black;
+}
+
+.prod_detail .content .result_pic {
+    position: relative;
+    margin-left: 84px;
+    margin-top: 30px;
+    width: 350px;
+    height: 350px;
+    /*border: 1px solid rgb(23, 149, 19);*/
+}
+
+.prod_detail .content .result_pic img {
+    width: 350px;
+    height: 350px;
+    display: none;
+}
+
+.prod_detail .content .result_pic .active{
+    display: block;
+}

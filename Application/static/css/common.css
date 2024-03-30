@@ -1,0 +1,40 @@
+.header {
+    background-color: rgba(189, 158, 158, 0.6);
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 1140px;
+}
+
+h1 a{
+    color: white;
+}
+
+.header .wrapper {
+    height: 50px;
+    line-height: 50px;
+}
+
+.header .wrapper ul {
+    float: right;
+}
+
+.header .wrapper li {
+    float: left;
+    margin-right: 40px;
+}
+
+.header .wrapper li:first-child {
+    margin-right: 20px;
+}
+
+.header .wrapper h1 {
+    margin-left: 300px;
+    color: white;
+}
+
+.footer {
+    height: 40px;
+    background-color: rgba(189, 158, 158, 0.6);
+}
